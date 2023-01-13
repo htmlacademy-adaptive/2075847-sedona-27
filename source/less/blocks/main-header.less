@@ -21,10 +21,15 @@
   &:active {
     opacity: 0.3;
   }
+
+  @media(min-width: @tablet-width) {
+    z-index: 2;
+  }
 }
 
 .main-header__logo-image {
   display: block;
+  z-index: 2;
 
   @media (min-width: @tablet-width) {
     position: absolute;
