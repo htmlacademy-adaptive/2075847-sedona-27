@@ -1,5 +1,12 @@
 .main-footer {
   padding: 39px;
+
+  @media(min-width: @tablet-width) {
+    padding: 36px 76px 45px 60px;
+    display: flex;
+
+    justify-content: space-between;
+  }
 }
 
 .main-footer__tag {
@@ -9,9 +16,23 @@
   text-align: center;
   display: block;
   text-transform: uppercase;
-  margin-bottom: 34px;
+  margin-bottom: 33px;
   color: #000000;
   text-decoration: none;
+
+  @media(min-width: @tablet-width) {
+    margin: 0;
+    text-align: left;
+    line-height: 54px;
+  }
+}
+
+.main-footer__list {
+  margin: 0 6px 28px 0;
+
+  @media(min-width: @tablet-width) {
+    margin: 0 0 0 15px;
+  }
 }
 
 .main-footer__link {
@@ -21,6 +42,10 @@
   text-align: center;
   display: block;
   padding-right: 7px;
+
+  @media(min-width: @tablet-width) {
+    line-height: 54px;
+  }
 
   &:hover {
     color: #81b3d2;
