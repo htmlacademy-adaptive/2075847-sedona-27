@@ -1,6 +1,14 @@
 .main-header {
   position: relative;
   margin-bottom: 33px;
+
+  @media(min-width: @tablet-width) {
+    margin-bottom: 48px;
+  }
+
+  @media(min-width: @desktop-width) {
+    margin-bottom: 59px;
+  }
 }
 
 .main-header__wrap {
