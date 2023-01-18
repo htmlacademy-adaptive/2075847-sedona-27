@@ -82,11 +82,15 @@
 .advantages__container {
   color: #ffffff;
   background-color: #81b3d2;
-  background-image: url(../img/main/white-background-top.png);
+  background-image: url("../img/main/white-background-top.png");
   background-repeat: no-repeat;
   background-size: auto;
   background-position: center top;
-  padding: 71px 18px 38px 18px;
+  padding: 50px 18px 39px 18px;
+
+  @media (max-width: @mobile-width-only) {
+    padding: 71px 18px 38px 18px;
+  }
 
   @media (min-width: @tablet-width) {
     background-image: none;
@@ -200,5 +204,9 @@
   @media (min-width: @tablet-width) {
     height: 256px;
     object-position: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    object-position: center -15px;
   }
 }
