@@ -12,11 +12,14 @@
 }
 
 .main-header__wrap {
-  display: flex;
   height: 56px;
   background-color: #ffffff;
   position: relative;
   z-index: 4;
+
+  @media (min-width: @tablet-width) {
+    height: 100%;
+  }
 }
 
 .main-header__logo {
@@ -36,40 +39,11 @@
 }
 
 .main-header__logo-image {
-  display: block;
   z-index: 2;
-
-  @media (min-width: @tablet-width) {
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    margin: 0 auto;
-  }
-}
-
-.main-header__toggle {
   position: absolute;
-  background-color: transparent;
-  right: 20px;
-  top: 17px;
-  width: 23px;
-  height: 22px;
-  padding: 0;
-  border: none;
-  cursor: pointer;
-  background-image: url("../img/toggle/toggle_open.svg");
-
-  &:hover {
-    opacity: 0.6;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
-
-  @media (min-width: @tablet-width) {
-    display: none;
-  }
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0 auto;
 }
