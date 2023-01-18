@@ -1,14 +1,28 @@
 .heading {
   background-color: #305a80;
-  background-image: url("../img/background-bottom.png"), url("../img/heading-background.jpg");
-  background-position: bottom, center;
-  background-repeat: no-repeat, no-repeat;
-  background-size: auto, cover;
+  background-image: url("../img/heading/heading-background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 389px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     height: 518px;
   }
+}
+
+.heading::before {
+  content: "";
+  position: absolute;
+  height: 57px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background-image: url(../img/heading/heading-background-bottom.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .heading__image {
