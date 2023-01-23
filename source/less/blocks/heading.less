@@ -12,6 +12,12 @@
   }
 }
 
+@media (min-resolution: 2dppx) {
+  .heading {
+    background-image: url("../img/heading/heading-background@2x.jpg");
+  }
+}
+
 .heading::before {
   content: "";
   position: absolute;
@@ -21,8 +27,21 @@
   bottom: 0;
   background-image: url("../img/heading/heading-background-bottom.png");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center bottom;
   background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/heading/heading-background-bottom@2x.png");
+  }
+
+  @media (min-width: 769px) {
+    height: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 200px;
+    background-size: contain;
+  }
 }
 
 .heading__image {
