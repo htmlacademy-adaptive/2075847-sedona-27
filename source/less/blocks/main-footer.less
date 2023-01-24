@@ -1,9 +1,12 @@
 .main-footer {
   padding: 39px;
+  display: flex;
+  flex-direction: column;
 
   @media (min-width: @tablet-width) {
     padding: 36px 76px 45px 60px;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
   }
 
@@ -31,7 +34,7 @@
 }
 
 .main-footer__list {
-  margin: 0 6px 28px 0;
+  margin: 0 6px 42px 0;
 
   @media (min-width: @tablet-width) {
     margin: 0 0 0 15px;
@@ -44,10 +47,10 @@
   text-decoration: none;
   text-align: center;
   display: block;
-  padding-right: 7px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
-    transform: translate(-2px, -4px);
+    padding-top: 8px;
   }
 
   &:hover {
@@ -59,6 +62,7 @@
   }
 }
 
-.htmlacademy {
-  transform: translate(8px, 50% - 17px);
+.main-footer__link-htmlacademy {
+  vertical-align: middle;
+  padding-left: 9px;
 }
