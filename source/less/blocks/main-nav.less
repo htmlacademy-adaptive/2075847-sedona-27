@@ -141,9 +141,13 @@
 }
 
 .main-nav--nojs .main-nav__toggle {
-  display: none;
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
 }
 
 .main-nav--nojs .main-nav__list {
-  display: block;
+  @media (max-width: @mobile-width-only) {
+    display: block;
+  }
 }
