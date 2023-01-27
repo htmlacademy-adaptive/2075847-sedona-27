@@ -1,5 +1,5 @@
 .main-nav {
-  position: absolute;
+  position: relative;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
@@ -7,6 +7,10 @@
   left: 0;
   top: 0;
   z-index: 2;
+
+  &--opened {
+    position: absolute;
+  }
 
   @media (min-width: @tablet-width) {
     display: block;
@@ -17,9 +21,16 @@
   }
 }
 
-.main-nav .main-nav__list {
+.main-nav--nojs .main-nav__toggle {
   display: none;
+}
 
+.main-nav--nojs .main-nav__list {
+  display: block;
+  position: static;
+}
+
+.main-nav .main-nav__list {
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr 153px 1fr 1fr;
@@ -43,6 +54,7 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
+  display: none;
 }
 
 .main-nav__list::before {
@@ -111,6 +123,7 @@
   padding: 0;
   color: #ffffff;
   cursor: pointer;
+  z-index: 2;
 
   &:hover {
     opacity: 0.6;
@@ -140,14 +153,4 @@
   width: 22px;
   height: 22px;
   background-image: url("../img/toggle/toggle_close.svg");
-}
-
-.main-nav--nojs .main-nav__toggle {
-  display: none;
-}
-
-.main-nav--nojs .main-nav__list {
-  @media (max-width: @mobile-width-only) {
-    display: block;
-  }
 }

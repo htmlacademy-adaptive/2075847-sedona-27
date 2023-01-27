@@ -16,3 +16,7 @@ navToggle.addEventListener('click', function () {
 let map = document.querySelector('.search-hotel');
 
 map.classList.remove('search-hotel--nojs');
+
+let headerWrap = document.querySelector('.main-header__wrap');
+
+headerWrap.classList.remove('main-header__wrap--nojs');
