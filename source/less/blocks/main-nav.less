@@ -46,10 +46,12 @@
 }
 
 .main-nav__list::before {
-  content: "";
-  display: block;
-  grid-column: 3;
-  grid-row: span 2;
+  @media (min-width: @tablet-width) {
+    content: "";
+    display: block;
+    grid-column: 3;
+    grid-row: span 2;
+  }
 }
 
 .main-nav__item {

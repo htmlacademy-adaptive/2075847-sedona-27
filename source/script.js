@@ -12,3 +12,7 @@ navToggle.addEventListener('click', function () {
     navMain.classList.remove('main-nav--opened');
   }
 });
+
+let map = document.querySelector('.search-hotel');
+
+map.classList.remove('search-hotel--nojs');
