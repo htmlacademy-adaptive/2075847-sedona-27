@@ -1,6 +1,6 @@
 .social {
   padding: 0;
-  margin: 0;
+  margin: 0 0 42px 6px;
   list-style-type: none;
   display: grid;
   grid-template-columns: repeat(4, auto);
@@ -8,9 +8,8 @@
   justify-content: center;
   align-content: baseline;
 
-  @media (max-width: @mobile-width-only) {
-    margin-bottom: 42px;
-    margin-left: 6px;
+  @media (min-width: @tablet-width) {
+    margin: 0;
   }
 }
 
