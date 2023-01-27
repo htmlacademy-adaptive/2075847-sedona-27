@@ -86,3 +86,24 @@
     height: 350px;
   }
 }
+
+.search-hotel__map-link {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    background-color: #81b3d2;
+    border-radius: 50%;
+    border: 5px solid #ffffff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @media (min-width: @tablet-width) {
+      transform: translate(-50%, -45%);
+    }
+  }
+}
