@@ -17,6 +17,7 @@
 .advantages__item {
   text-align: center;
   background-color: #eeeeee;
+  position: relative;
 }
 
 .advantages__item:first-child {
@@ -129,14 +130,30 @@
 
 .advantages__wrap {
   padding: 24px  35px;
-  position: relative;
   border-bottom: 1px solid transparent;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     padding: 0;
     position: static;
     border: none;
   }
+}
+
+.advantages__item .advantages__wrap::before {
+  @media (max-width: @mobile-width-only) {
+    content: "";
+    position: absolute;
+    width: 90%;
+    height: 1px;
+    background-color: #d6d6d6;
+    bottom: 0;
+    left: 5%;
+  }
+}
+
+.advantages__item:last-child .advantages__wrap::before {
+  display: none;
 }
 
 .advantages__title {
