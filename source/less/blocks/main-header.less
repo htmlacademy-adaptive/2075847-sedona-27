@@ -20,45 +20,30 @@
     height: 100%;
   }
 }
-//
-//.main-header__wrap--nojs .main-nav {
-//  @media (max-width: @mobile-width-only) {
-//    position: relative;
-//  }
-//}
-//
-//.main-header__wrap--nojs .main-header__logo {
-//  @media (max-width: @mobile-width-only) {
-//    position: relative;
-//    z-index: 2;
-//    display: block;
-//    margin-bottom: -40px;
-//  }
-//}
 
 .main-header__logo {
-
+  margin: 0 auto;
   position: relative;
   z-index: 1;
   display: block;
   margin-bottom: -40px;
+  width: 185px;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: @tablet-width) {
-    margin: 0 auto;
-    z-index: 1;
+    z-index: 3;
     position: absolute;
     right: 0;
     top: 0;
     bottom: 0;
     left: 0;
-
-    &:hover {
-      opacity: 0.6;
-    }
-
-    &:active {
-      opacity: 0.3;
-    }
   }
 }
 
